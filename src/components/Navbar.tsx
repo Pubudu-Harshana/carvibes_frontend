@@ -8,20 +8,25 @@ import { Menu, X, Briefcase, ChevronRight } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, targetId: string) => {
     if (window.location.pathname === "/") {
       e.preventDefault();
-      const element = document.getElementById(targetId);
-      if (element) {
-        const headerOffset = 90; // Adjust for sticky header height + padding
-        const elementPosition = element.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.scrollY - headerOffset;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const lenis = (window as any).lenis;
+      if (lenis) {
+        lenis.scrollTo(`#${targetId}`, { offset: -90 });
+      } else {
+        const element = document.getElementById(targetId);
+        if (element) {
+          const headerOffset = 90; // Adjust for sticky header height + padding
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.scrollY - headerOffset;
 
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth"
-        });
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+          });
+        }
       }
     }
   };
