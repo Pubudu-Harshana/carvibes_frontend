@@ -42,7 +42,8 @@ export async function POST(request: Request) {
         experience,
         cvName,
         cvType,
-        cvData
+        cvData,
+        notificationEmail: process.env.NOTIFICATION_EMAIL || ""
       }),
       // Apps Script uses redirects during execution, follow them
       redirect: "follow"

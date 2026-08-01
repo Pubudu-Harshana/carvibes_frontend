@@ -31,12 +31,28 @@ export default function Navbar() {
     }
   };
 
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    if (window.location.pathname === "/") {
+      e.preventDefault();
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const lenis = (window as any).lenis;
+      if (lenis) {
+        lenis.scrollTo(0);
+      } else {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      }
+    }
+  };
+
   return (
     <header className="sticky top-0 z-50 w-full glass-panel border-b border-white/5 transition-all duration-300">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center shrink-0 group">
+          <Link href="/" onClick={handleLogoClick} className="flex items-center shrink-0 group">
             <Image
               src="/logo.png"
               alt="CarVibes.lk Logo"

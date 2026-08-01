@@ -22,6 +22,10 @@ function doPost(e) {
   try {
     // 1. Parse JSON payload
     var payload = JSON.parse(e.postData.contents);
+    
+    // Choose destination email (payload parameter or default fallback)
+    var recipientEmail = payload.notificationEmail || NOTIFICATION_EMAIL;
+    
     var position = payload.position;
     var name = payload.name;
     var homeTown = payload.homeTown;
@@ -108,7 +112,7 @@ function doPost(e) {
       "Sincerely,\n" +
       "CarVibes.lk Recruitment Portal System";
 
-    GmailApp.sendEmail(NOTIFICATION_EMAIL, emailSubject, emailBody);
+    GmailApp.sendEmail(recipientEmail, emailSubject, emailBody);
 
     // 7. Return success response
     return ContentService.createTextOutput(
