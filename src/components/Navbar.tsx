@@ -35,20 +35,16 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full glass-panel border-b border-white/5 transition-all duration-300">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
-          {/* Logo and Brand Name */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative h-10 w-10 overflow-hidden rounded-lg bg-black p-1 transition-transform group-hover:scale-105">
-              <Image
-                src="/logo.png"
-                alt="CarVibes.lk Logo"
-                fill
-                className="object-contain"
-                sizes="40px"
-              />
-            </div>
-            <span className="text-xl font-bold tracking-tight text-white group-hover:text-primary transition-colors">
-              carvibes<span className="text-primary">.lk</span>
-            </span>
+          {/* Logo */}
+          <Link href="/" className="flex items-center shrink-0 group">
+            <Image
+              src="/logo.png"
+              alt="CarVibes.lk"
+              width={160}
+              height={46}
+              className="h-11 w-auto object-contain transition-transform group-hover:scale-[1.02]"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}
