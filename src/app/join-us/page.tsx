@@ -26,6 +26,7 @@ export default function JoinUs() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const [submittedInfo, setSubmittedInfo] = useState<{ name: string; position: string } | null>(null);
 
   // Position Options
   const positions = [
@@ -138,6 +139,10 @@ export default function JoinUs() {
       const result = await response.json();
 
       if (response.ok) {
+        setSubmittedInfo({
+          name: formData.name,
+          position: formData.position
+        });
         setSubmitStatus("success");
         // Clear form
         setFormData({
@@ -407,11 +412,11 @@ export default function JoinUs() {
               <div className="p-4 rounded-xl bg-white/5 border border-white/10 max-w-sm mx-auto text-left space-y-2 text-sm text-gray-300">
                 <div className="flex justify-between border-b border-white/5 pb-2">
                   <span className="text-gray-500">Applicant:</span>
-                  <span className="font-semibold text-white">{formData.name}</span>
+                  <span className="font-semibold text-white">{submittedInfo?.name}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-500">Position:</span>
-                  <span className="font-semibold text-white">{formData.position}</span>
+                  <span className="font-semibold text-white">{submittedInfo?.position}</span>
                 </div>
               </div>
 
