@@ -10,19 +10,15 @@ export default function Footer() {
           
           {/* Logo & About */}
           <div className="space-y-4">
-            <Link href="/" className="flex items-center gap-3 group">
-              <div className="relative h-10 w-10 overflow-hidden rounded-lg bg-black p-1">
-                <Image
-                  src="/logo.png"
-                  alt="CarVibes.lk Logo"
-                  fill
-                  className="object-contain"
-                  sizes="40px"
-                />
-              </div>
-              <span className="text-xl font-bold tracking-tight text-white">
-                carvibes<span className="text-primary">.lk</span>
-              </span>
+            <Link href="/" className="flex items-center shrink-0 group">
+              <Image
+                src="/logo.png"
+                alt="CarVibes.lk Logo"
+                width={150}
+                height={42}
+                className="h-10 w-auto object-contain transition-transform group-hover:scale-[1.01]"
+                priority
+              />
             </Link>
             <p className="text-sm text-gray-500 leading-relaxed">
               Sri Lanka&apos;s premier professional car detailing & auto care service. Experience luxury detailing perfected to perfection.
