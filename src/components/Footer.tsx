@@ -14,9 +14,9 @@ export default function Footer() {
               <Image
                 src="/logo.png"
                 alt="CarVibes.lk Logo"
-                width={150}
-                height={42}
-                className="h-10 w-auto object-contain transition-transform group-hover:scale-[1.01]"
+                width={160}
+                height={46}
+                className="h-10 w-auto object-contain transition-transform group-hover:scale-[1.02]"
                 priority
               />
             </Link>
