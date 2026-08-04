@@ -18,19 +18,19 @@ import {
 const branches = [
   {
     name: "Kosgama",
-    phone: "+94 36 225 1234",
+    phone: "+94 71 718 8814",
     address: "No. 45, High Level Road, Kosgama",
     mapLink: "#"
   },
   {
     name: "Avissawella",
-    phone: "+94 36 222 5678",
+    phone: "+94 71 718 8814",
     address: "No. 112, Colombo Road, Avissawella",
     mapLink: "#"
   },
   {
     name: "Ratnapura",
-    phone: "+94 45 223 9988",
+    phone: "+94 71 718 8814",
     address: "No. 89, Bandaranayake Mw, Ratnapura",
     mapLink: "#"
   }
@@ -148,88 +148,114 @@ export default function Home() {
       </section>
 
       {/* ── BRANCHES SECTION ───────────────────────────────────────────── */}
-      <section id="branches" className="max-w-7xl mx-auto px-4 py-20 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center space-y-4 mb-16">
-          <h2 className="text-xs font-bold uppercase tracking-widest text-primary">Locations</h2>
-          <h3 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white uppercase">
-            Our Growing Network
-          </h3>
-          <p className="text-sm text-gray-500 max-w-md mx-auto">
-            Opening soon in key automotive hubs to deliver premium detailing at your convenience.
-          </p>
+      <div className="relative w-full">
+        {/* Background image with premium overlays */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/Our Growing Network.webp"
+            alt="Our Growing Network Backdrop"
+            fill
+            className="object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A] via-transparent to-[#0A0A0A]" />
         </div>
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
-          {branches.map((branch, idx) => (
-            <motion.div
-              key={branch.name}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="glass-card p-8 flex flex-col justify-between space-y-6"
-            >
-              <div className="space-y-4">
-                <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-white/5 border border-white/10 text-primary">
-                  <MapPin className="h-6 w-6" />
-                </div>
-                <h4 className="text-xl font-bold text-white uppercase">{branch.name}</h4>
-                <p className="text-sm text-gray-400 leading-relaxed font-light">{branch.address}</p>
-              </div>
-              <div className="pt-4 border-t border-white/5 flex items-center justify-between text-xs text-gray-500">
-                <span>Inquiries:</span>
-                <span className="font-semibold text-white">{branch.phone}</span>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </section>
+        <section id="branches" className="max-w-7xl mx-auto px-4 py-20 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center space-y-4 mb-16">
+            <h2 className="text-xs font-bold uppercase tracking-widest text-primary">Locations</h2>
+            <h3 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white uppercase">
+              Our Growing Network
+            </h3>
+            <p className="text-sm text-gray-500 max-w-md mx-auto">
+              Opening soon in key automotive hubs to deliver premium detailing at your convenience.
+            </p>
+          </div>
 
-      {/* ── SERVICES SECTION ───────────────────────────────────────────── */}
-      <section id="services" className="max-w-7xl mx-auto px-4 py-20 sm:px-6 lg:px-8 relative z-10 border-t border-white/5">
-        <div className="text-center space-y-4 mb-16">
-          <h2 className="text-xs font-bold uppercase tracking-widest text-primary">Services Offered</h2>
-          <h3 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white uppercase">
-            What We Do
-          </h3>
-          <p className="text-sm text-gray-500 max-w-md mx-auto">
-            Professional car care services designed to protect, restore, and maintain your vehicle.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service, idx) => {
-            const IconComponent = service.icon;
-            return (
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+            {branches.map((branch, idx) => (
               <motion.div
-                key={service.name}
+                key={branch.name}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="glass-card p-8 flex flex-col justify-between group"
+                className="glass-card p-8 flex flex-col justify-between space-y-6"
               >
                 <div className="space-y-4">
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 border border-primary/20 text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
-                    <IconComponent className="h-6 w-6" />
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-white/5 border border-white/10 text-primary">
+                    <MapPin className="h-6 w-6" />
                   </div>
-                  <h4 className="text-lg font-bold text-white group-hover:text-primary transition-colors uppercase">
-                    {service.name}
-                  </h4>
-                  <p className="text-sm text-gray-400 font-light leading-relaxed">
-                    {service.description}
-                  </p>
+                  <h4 className="text-xl font-bold text-white uppercase">{branch.name}</h4>
+                  <p className="text-sm text-gray-400 leading-relaxed font-light">{branch.address}</p>
                 </div>
-                <div className="mt-6 pt-4 border-t border-white/5 flex items-center justify-between">
-                  <span className="text-xs font-semibold text-primary uppercase bg-primary/10 px-3 py-1 rounded-full">
-                    {service.price}
-                  </span>
+                <div className="pt-4 border-t border-white/5 flex items-center justify-between text-xs text-gray-500">
+                  <span>Inquiries:</span>
+                  <span className="font-semibold text-white">{branch.phone}</span>
                 </div>
               </motion.div>
-            );
-          })}
+            ))}
+          </div>
+        </section>
+      </div>
+
+      {/* ── SERVICES SECTION ───────────────────────────────────────────── */}
+      <div className="relative w-full border-t border-white/5">
+        {/* Background image with premium overlays */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/What We Do.webp"
+            alt="What We Do Backdrop"
+            fill
+            className="object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A] via-transparent to-[#0A0A0A]" />
         </div>
-      </section>
+
+        <section id="services" className="max-w-7xl mx-auto px-4 py-20 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center space-y-4 mb-16">
+            <h2 className="text-xs font-bold uppercase tracking-widest text-primary">Services Offered</h2>
+            <h3 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white uppercase">
+              What We Do
+            </h3>
+            <p className="text-sm text-gray-500 max-w-md mx-auto">
+              Professional car care services designed to protect, restore, and maintain your vehicle.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {services.map((service, idx) => {
+              const IconComponent = service.icon;
+              return (
+                <motion.div
+                  key={service.name}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: idx * 0.1 }}
+                  className="glass-card p-8 flex flex-col justify-between group"
+                >
+                  <div className="space-y-4">
+                    <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 border border-primary/20 text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                      <IconComponent className="h-6 w-6" />
+                    </div>
+                    <h4 className="text-lg font-bold text-white group-hover:text-primary transition-colors uppercase">
+                      {service.name}
+                    </h4>
+                    <p className="text-sm text-gray-400 font-light leading-relaxed">
+                      {service.description}
+                    </p>
+                  </div>
+                  <div className="mt-6 pt-4 border-t border-white/5 flex items-center justify-between">
+                    <span className="text-xs font-semibold text-primary uppercase bg-primary/10 px-3 py-1 rounded-full">
+                      {service.price}
+                    </span>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+        </section>
+      </div>
     </div>
   );
 }

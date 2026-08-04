@@ -23,6 +23,7 @@ export default function JoinUs() {
 
   const [cvFile, setCvFile] = useState<File | null>(null);
   const [cvError, setCvError] = useState("");
+  const [phoneError, setPhoneError] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
@@ -41,6 +42,9 @@ export default function JoinUs() {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+    if (name === "phoneNumber") {
+      setPhoneError("");
+    }
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -106,6 +110,17 @@ export default function JoinUs() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validate phone number (Sri Lankan formats)
+    const cleanNumber = formData.phoneNumber.replace(/[\s\-\(\)]/g, "");
+    const phoneRegex = /^(?:\+94|94|0)[0-9]{9}$/;
+    if (!phoneRegex.test(cleanNumber)) {
+      setPhoneError("Please enter a valid Sri Lankan phone number (e.g. 0717188814).");
+      return;
+    } else {
+      setPhoneError("");
+    }
+
     if (!cvFile) {
       setCvError("Please upload your CV before submitting.");
       return;
@@ -153,6 +168,7 @@ export default function JoinUs() {
           experience: "1"
         });
         setCvFile(null);
+        setPhoneError("");
       } else {
         setSubmitStatus("error");
         setErrorMessage(result.error || "Something went wrong. Please try again.");
@@ -280,9 +296,12 @@ export default function JoinUs() {
                       value={formData.phoneNumber}
                       onChange={handleInputChange}
                       placeholder="e.g. 0771234567"
-                      className="input-field w-full"
+                      className={`input-field w-full ${phoneError ? "border-red-500/50 focus:border-red-500" : ""}`}
                       required
                     />
+                    {phoneError && (
+                      <p className="text-xs text-red-500 font-semibold mt-1">{phoneError}</p>
+                    )}
                   </div>
                 </div>
 
