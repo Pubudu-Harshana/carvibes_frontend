@@ -9,7 +9,12 @@ export const metadata: Metadata = {
   description: "Join the team at Sri Lanka's premier professional auto detailing and car care center. Explore job positions and apply online.",
   keywords: ["CarVibes", "Car Detailing Sri Lanka", "Carvibes careers", "Job vacancies Sri Lanka", "Automotive jobs"],
   icons: {
-    icon: "/favicon.svg",
+    icon: [
+      {
+        url: "/favicon.svg",
+        type: "image/svg+xml",
+      },
+    ],
   },
 };
 
