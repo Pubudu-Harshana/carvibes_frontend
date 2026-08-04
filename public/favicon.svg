@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Premium Dark background with rounded corners -->
+  <rect width="512" height="512" rx="112" fill="#0A0A0A" />
+  
+  <!-- Subtle inner shadow/gradient/border -->
+  <rect x="12" y="12" width="488" height="488" rx="100" fill="none" stroke="#FF7A00" stroke-width="8" opacity="0.8" />
+  
+  <!-- Stylized CV emblem -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <!-- Stylized 'C' (Silver/White) -->
+    <path d="M 230 160 C 130 160, 130 352, 230 352" fill="none" stroke="#E5E7EB" stroke-width="44" />
+    
+    <!-- Stylized 'V' (Vibrant Orange) -->
+    <path d="M 265 160 L 325 352 L 385 160" fill="none" stroke="#FF7A00" stroke-width="44" />
+  </g>
+  
+  <!-- Speed lines under the logo (subtle detail) -->
+  <path d="M 160 410 L 352 410" fill="none" stroke="#FF7A00" stroke-width="8" stroke-linecap="round" opacity="0.5" />
+</svg>
