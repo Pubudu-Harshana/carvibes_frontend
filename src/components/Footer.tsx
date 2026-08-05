@@ -82,7 +82,7 @@ export default function Footer() {
                 <h4 className="text-sm font-medium text-white">Avissawella</h4>
                 <p className="mt-2 text-xs text-gray-500 flex items-start gap-1">
                   <MapPin className="h-3 w-3 mt-0.5 shrink-0 text-primary" />
-                  No. 112, Colombo Road, Avissawella.
+                  Coming soon.
                 </p>
                 <p className="mt-1 text-xs text-gray-500 flex items-center gap-1">
                   <Phone className="h-3 w-3 text-primary" />
@@ -93,7 +93,7 @@ export default function Footer() {
                 <h4 className="text-sm font-medium text-white">Ratnapura</h4>
                 <p className="mt-2 text-xs text-gray-500 flex items-start gap-1">
                   <MapPin className="h-3 w-3 mt-0.5 shrink-0 text-primary" />
-                  No. 89, Bandaranayake Mw, Ratnapura.
+                  Coming soon.
                 </p>
                 <p className="mt-1 text-xs text-gray-500 flex items-center gap-1">
                   <Phone className="h-3 w-3 text-primary" />

@@ -25,13 +25,13 @@ const branches = [
   {
     name: "Avissawella",
     phone: "+94 7171 888 14",
-    address: "No. 112, Colombo Road, Avissawella",
+    address: "Coming soon",
     mapLink: "#"
   },
   {
     name: "Ratnapura",
     phone: "+94 7171 888 14",
-    address: "No. 89, Bandaranayake Mw, Ratnapura",
+    address: "Coming soon",
     mapLink: "#"
   }
 ];
