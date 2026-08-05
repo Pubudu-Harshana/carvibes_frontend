@@ -19,18 +19,16 @@ const branches = [
   {
     name: "Kosgama",
     phone: "+94 7171 888 14",
-    address: "No. 45, High Level Road, Kosgama",
+    address: "Kosgama",
     mapLink: "#"
   },
   {
     name: "Avissawella",
-    phone: "+94 7171 888 14",
     address: "Coming soon",
     mapLink: "#"
   },
   {
     name: "Ratnapura",
-    phone: "+94 7171 888 14",
     address: "Coming soon",
     mapLink: "#"
   }
@@ -186,10 +184,12 @@ export default function Home() {
                   <h4 className="text-xl font-bold text-white uppercase">{branch.name}</h4>
                   <p className="text-sm text-gray-400 leading-relaxed font-light">{branch.address}</p>
                 </div>
-                <div className="pt-4 border-t border-white/5 flex items-center justify-between text-xs text-gray-500">
-                  <span>Inquiries:</span>
-                  <span className="font-semibold text-white">{branch.phone}</span>
-                </div>
+                {branch.phone && (
+                  <div className="pt-4 border-t border-white/5 flex items-center justify-between text-xs text-gray-500">
+                    <span>Inquiries:</span>
+                    <span className="font-semibold text-white">{branch.phone}</span>
+                  </div>
+                )}
               </motion.div>
             ))}
           </div>
