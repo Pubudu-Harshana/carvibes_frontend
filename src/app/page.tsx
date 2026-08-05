@@ -166,9 +166,7 @@ export default function Home() {
             <h3 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white uppercase">
               Our Growing Network
             </h3>
-            <p className="text-sm text-gray-500 max-w-md mx-auto">
-              Opening soon in key automotive hubs to deliver premium detailing at your convenience.
-            </p>
+
           </div>
 
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
