@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import {
@@ -127,14 +126,16 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="pt-4"
           >
-            <Link
-              href="/join-us"
+            <a
+              href="https://wa.me/94717188814?text=Hi%20CarVibes!%20I%20am%20interested%20in%20joining%20your%20team."
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-3 rounded-xl bg-primary hover:bg-primary/95 text-white orange-glow font-bold px-10 py-5 text-lg transition-all duration-300 hover:scale-[1.05] group"
             >
               <Briefcase className="h-5 w-5" />
               JOIN US
               <ChevronRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            </a>
           </motion.div>
         </div>
       </section>

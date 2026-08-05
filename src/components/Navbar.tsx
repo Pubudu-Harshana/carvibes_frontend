@@ -85,13 +85,15 @@ export default function Navbar() {
             >
               Services
             </Link>
-            <Link
-              href="/join-us"
+            <a
+              href="https://wa.me/94717188814?text=Hi%20CarVibes!%20I%20am%20interested%20in%20joining%20your%20team."
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-primary/95 hover:scale-[1.03] orange-glow"
             >
               <Briefcase className="h-4 w-4" />
               Join Us
-            </Link>
+            </a>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -143,15 +145,17 @@ export default function Navbar() {
               >
                 Services
               </Link>
-              <Link
-                href="/join-us"
+              <a
+                href="https://wa.me/94717188814?text=Hi%20CarVibes!%20I%20am%20interested%20in%20joining%20your%20team."
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setIsOpen(false)}
                 className="flex w-full items-center justify-center gap-2 rounded-xl bg-primary py-3 text-base font-semibold text-white transition-all hover:bg-primary/95"
               >
                 <Briefcase className="h-5 w-5" />
                 Join Us
                 <ChevronRight className="h-4 w-4" />
-              </Link>
+              </a>
             </div>
           </motion.div>
         )}

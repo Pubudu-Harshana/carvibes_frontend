@@ -58,7 +58,14 @@ export default function Footer() {
                 <Link href="/#services" className="hover:text-white transition-colors">Services</Link>
               </li>
               <li>
-                <Link href="/join-us" className="hover:text-white transition-colors">Careers (Join Us)</Link>
+                <a
+                  href="https://wa.me/94717188814?text=Hi%20CarVibes!%20I%20am%20interested%20in%20joining%20your%20team."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                >
+                  Careers (Join Us)
+                </a>
               </li>
             </ul>
           </div>
