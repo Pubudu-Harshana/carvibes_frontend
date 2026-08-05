@@ -126,7 +126,7 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto font-light leading-relaxed"
           >
-            Sri Lanka&apos;s ultimate luxury automotive detailing experience is expanding. We are building the most advanced auto-care centers in Kosgama, Avissawella, and Ratnapura.
+            Sri Lanka&apos;s ultimate luxury automotive detailing experience is being unleashed. Feel the premium services at Kosgama.
           </motion.p>
 
           <motion.div
