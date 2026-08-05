@@ -37,37 +37,31 @@ const branches = [
 const services = [
   {
     name: "Exterior Detailing",
-    price: "From Rs. 4,500",
-    description: "Full exterior wash, clay bar, polish & UV protection sealant.",
+    description: "Full exterior wash, clay bar and wax",
     icon: Shield
   },
   {
     name: "Interior Detailing",
-    price: "From Rs. 5,000",
     description: "Deep clean, steam sanitize seats, carpets & all surfaces.",
     icon: Sparkles
   },
   {
     name: "Cut & Polish",
-    price: "From Rs. 6,000",
     description: "Eliminate swirl marks, scratches & oxidation. Restore paint depth.",
     icon: Layers
   },
   {
     name: "Ceramic Coating",
-    price: "From Rs. 25,000",
     description: "Professional nano-ceramic coating for 2+ years of premium protection.",
     icon: ShieldCheck
   },
   {
     name: "Headlight Restoration",
-    price: "From Rs. 3,000",
     description: "Restore headlight clarity & improve night visibility safely.",
     icon: Eye
   },
   {
     name: "Mobile Detailing",
-    price: "From Rs. 5,500",
     description: "We come to your home or office — full professional detailing on-site.",
     icon: Car
   }
@@ -243,10 +237,16 @@ export default function Home() {
                       {service.description}
                     </p>
                   </div>
-                  <div className="mt-6 pt-4 border-t border-white/5 flex items-center justify-between">
-                    <span className="text-xs font-semibold text-primary uppercase bg-primary/10 px-3 py-1 rounded-full">
-                      {service.price}
-                    </span>
+                  <div className="mt-6 pt-4 border-t border-white/5">
+                    <a
+                      href={`https://wa.me/94717188814?text=Hi%20CarVibes!%20I%20would%20like%20to%20request%20a%20quotation%20for%20the%20${encodeURIComponent(service.name)}%20service.`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3 text-xs font-bold text-white transition-all duration-300 hover:bg-primary/95 hover:scale-[1.02] uppercase tracking-wider orange-glow"
+                    >
+                      Request for a Quotation
+                      <ChevronRight className="h-4 w-4" />
+                    </a>
                   </div>
                 </motion.div>
               );
