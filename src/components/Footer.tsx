@@ -75,7 +75,7 @@ export default function Footer() {
                 </p>
                 <p className="mt-1 text-xs text-gray-500 flex items-center gap-1">
                   <Phone className="h-3 w-3 text-primary" />
-                  +94 71 718 8814
+                  +94 7171 888 14
                 </p>
               </div>
               <div>
@@ -86,7 +86,7 @@ export default function Footer() {
                 </p>
                 <p className="mt-1 text-xs text-gray-500 flex items-center gap-1">
                   <Phone className="h-3 w-3 text-primary" />
-                  +94 71 718 8814
+                  +94 7171 888 14
                 </p>
               </div>
               <div>
@@ -97,7 +97,7 @@ export default function Footer() {
                 </p>
                 <p className="mt-1 text-xs text-gray-500 flex items-center gap-1">
                   <Phone className="h-3 w-3 text-primary" />
-                  +94 71 718 8814
+                  +94 7171 888 14
                 </p>
               </div>
             </div>

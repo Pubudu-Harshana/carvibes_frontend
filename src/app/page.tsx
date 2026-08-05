@@ -18,19 +18,19 @@ import {
 const branches = [
   {
     name: "Kosgama",
-    phone: "+94 71 718 8814",
+    phone: "+94 7171 888 14",
     address: "No. 45, High Level Road, Kosgama",
     mapLink: "#"
   },
   {
     name: "Avissawella",
-    phone: "+94 71 718 8814",
+    phone: "+94 7171 888 14",
     address: "No. 112, Colombo Road, Avissawella",
     mapLink: "#"
   },
   {
     name: "Ratnapura",
-    phone: "+94 71 718 8814",
+    phone: "+94 7171 888 14",
     address: "No. 89, Bandaranayake Mw, Ratnapura",
     mapLink: "#"
   }
