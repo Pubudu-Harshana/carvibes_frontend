@@ -56,9 +56,9 @@ export default function Navbar() {
             <Image
               src="/logo.png"
               alt="CarVibes.lk Logo"
-              width={180}
-              height={52}
-              className="h-12 w-auto object-contain transition-transform group-hover:scale-[1.02]"
+              width={210}
+              height={60}
+              className="h-[60px] w-auto object-contain transition-transform group-hover:scale-[1.02]"
               priority
             />
           </Link>

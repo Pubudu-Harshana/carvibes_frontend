@@ -88,27 +88,13 @@ export default function Home() {
         {/* Hero Content */}
         <div className="relative z-10 text-center max-w-4xl mx-auto space-y-8 -mt-16 sm:-mt-24">
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-semibold uppercase tracking-wider text-primary"
-          >
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            Launching Soon
-          </motion.div>
-
-          <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="space-y-4"
           >
             <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight text-white uppercase">
               CarVibes<span className="text-primary font-bold">.lk</span>
             </h1>
-            <p className="text-xl sm:text-2xl font-semibold tracking-[0.3em] text-gray-400 uppercase orange-glow-text">
-              Coming Soon
-            </p>
           </motion.div>
 
           <motion.p
