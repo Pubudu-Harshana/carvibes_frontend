@@ -72,7 +72,7 @@ export default function Home() {
     <div className="relative w-full overflow-hidden min-h-screen hero-bg-overlay pb-20">
       
       {/* ── HERO & COMING SOON SECTION ─────────────────────────────────── */}
-      <section className="relative min-h-[75vh] sm:min-h-[80vh] flex flex-col items-center justify-center pt-24 px-4 sm:px-6 lg:px-8">
+      <section className="relative min-h-[85vh] sm:min-h-[90vh] flex flex-col items-center justify-center pt-24 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8">
         
         {/* Background image container with premium styling and overlays */}
         <div className="absolute inset-0 z-0">
@@ -87,7 +87,7 @@ export default function Home() {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 text-center max-w-4xl mx-auto space-y-8 mt-2 sm:mt-4">
+        <div className="relative z-10 text-center max-w-4xl mx-auto space-y-8 mt-6 sm:mt-10">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -98,7 +98,7 @@ export default function Home() {
             </h1>
           </motion.div>
 
-          <div className="pt-8 sm:pt-12 space-y-8">
+          <div className="pt-16 sm:pt-24 space-y-8">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
