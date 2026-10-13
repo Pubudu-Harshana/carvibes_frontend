@@ -107,7 +107,7 @@ export default function Footer() {
 
         </div>
 
-        <div className="mt-12 border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-20 sm:mt-28 border-t border-white/5 pt-8 sm:pt-10 pb-2 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-gray-600">
             &copy; {new Date().getFullYear()} CarVibes.lk. All rights reserved. | Developed by <a href="https://infavour.tech" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-primary transition-colors font-medium">Infavour Solutions</a>
           </p>

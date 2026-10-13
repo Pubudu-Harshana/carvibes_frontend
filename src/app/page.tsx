@@ -87,7 +87,7 @@ export default function Home() {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 text-center max-w-4xl mx-auto space-y-8 mt-6 sm:mt-10">
+        <div className="relative z-10 text-center max-w-4xl mx-auto space-y-8 mt-8 sm:mt-12">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -98,7 +98,7 @@ export default function Home() {
             </h1>
           </motion.div>
 
-          <div className="pt-16 sm:pt-24 space-y-8">
+          <div className="pt-20 sm:pt-28 md:pt-32 space-y-8">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
