@@ -79,6 +79,13 @@ export default function Navbar() {
               Branches
             </Link>
             <Link
+              href="/#facility"
+              onClick={(e) => handleScroll(e, "facility")}
+              className="text-sm font-medium text-gray-300 hover:text-white transition-colors"
+            >
+              Studio
+            </Link>
+            <Link
               href="/#services"
               onClick={(e) => handleScroll(e, "services")}
               className="text-sm font-medium text-gray-300 hover:text-white transition-colors"
@@ -134,6 +141,16 @@ export default function Navbar() {
                 className="block text-base font-medium text-gray-300 hover:text-white py-2 border-b border-white/5"
               >
                 Branches
+              </Link>
+              <Link
+                href="/#facility"
+                onClick={(e) => {
+                  setIsOpen(false);
+                  handleScroll(e, "facility");
+                }}
+                className="block text-base font-medium text-gray-300 hover:text-white py-2 border-b border-white/5"
+              >
+                Studio
               </Link>
               <Link
                 href="/#services"

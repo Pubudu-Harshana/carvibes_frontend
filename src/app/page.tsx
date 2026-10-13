@@ -13,6 +13,7 @@ import {
   Briefcase,
   ChevronRight
 } from "lucide-react";
+import FacilityGallery from "@/components/FacilityGallery";
 
 const branches = [
   {
@@ -76,7 +77,7 @@ export default function Home() {
         {/* Background image container with premium styling and overlays */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/hero-bg.png"
+            src="/landingpage.jpg"
             alt="CarVibes Premium Automotive Backdrop"
             fill
             className="object-cover opacity-35 object-center"
@@ -176,6 +177,9 @@ export default function Home() {
           </div>
         </section>
       </div>
+
+      {/* ── FACILITY PHOTO TOUR SECTION ────────────────────────────────── */}
+      <FacilityGallery />
 
       {/* ── SERVICES SECTION ───────────────────────────────────────────── */}
       <div className="relative w-full border-t border-white/5">
