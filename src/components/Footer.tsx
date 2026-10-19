@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Phone, MapPin } from "lucide-react";
-import { WHATSAPP_LINKS } from "@/constants/whatsapp";
+import { WHATSAPP_LINKS, GOOGLE_MAPS_KOSGAMA_URL } from "@/constants/whatsapp";
 
 export default function Footer() {
   return (
@@ -125,10 +125,15 @@ export default function Footer() {
             <div className="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-3">
               <div>
                 <h4 className="text-sm font-medium text-white">Kosgama</h4>
-                <p className="mt-2 text-xs text-gray-500 flex items-start gap-1">
-                  <MapPin className="h-3 w-3 mt-0.5 shrink-0 text-primary" />
-                  Kosgama
-                </p>
+                <a
+                  href={GOOGLE_MAPS_KOSGAMA_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 text-xs text-gray-500 hover:text-primary transition-colors flex items-start gap-1 group"
+                >
+                  <MapPin className="h-3 w-3 mt-0.5 shrink-0 text-primary group-hover:scale-110 transition-transform" />
+                  <span>Kosgama</span>
+                </a>
                 <p className="mt-1 text-xs text-gray-500 flex items-center gap-1">
                   <Phone className="h-3 w-3 text-primary" />
                   +94 7171 888 14

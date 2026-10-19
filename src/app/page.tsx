@@ -16,14 +16,14 @@ import {
   Calendar
 } from "lucide-react";
 import FacilityGallery from "@/components/FacilityGallery";
-import { WHATSAPP_LINKS, getServiceQuotationUrl } from "@/constants/whatsapp";
+import { WHATSAPP_LINKS, getServiceQuotationUrl, GOOGLE_MAPS_KOSGAMA_URL } from "@/constants/whatsapp";
 
 const branches = [
   {
     name: "Kosgama",
     phone: "+94 7171 888 14",
     address: "Kosgama",
-    mapLink: "#"
+    mapLink: GOOGLE_MAPS_KOSGAMA_URL
   },
   {
     name: "Avissawella",
@@ -206,11 +206,37 @@ export default function Home() {
                 className="glass-card p-8 flex flex-col justify-between space-y-6"
               >
                 <div className="space-y-4">
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-white/5 border border-white/10 text-primary">
-                    <MapPin className="h-6 w-6" />
-                  </div>
+                  {branch.mapLink && branch.mapLink !== "#" ? (
+                    <a
+                      href={branch.mapLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-white/5 border border-white/10 text-primary hover:bg-primary hover:text-white transition-all duration-300"
+                      aria-label={`View ${branch.name} location on Google Maps`}
+                    >
+                      <MapPin className="h-6 w-6" />
+                    </a>
+                  ) : (
+                    <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-white/5 border border-white/10 text-primary">
+                      <MapPin className="h-6 w-6" />
+                    </div>
+                  )}
                   <h4 className="text-xl font-bold text-white uppercase">{branch.name}</h4>
-                  <p className="text-sm text-gray-400 leading-relaxed font-light">{branch.address}</p>
+                  {branch.mapLink && branch.mapLink !== "#" ? (
+                    <a
+                      href={branch.mapLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-sm text-gray-400 hover:text-primary transition-colors leading-relaxed font-light group/link"
+                    >
+                      <span>{branch.address}</span>
+                      <span className="text-xs text-primary underline underline-offset-4 group-hover/link:text-white transition-colors">
+                        (View on Google Maps)
+                      </span>
+                    </a>
+                  ) : (
+                    <p className="text-sm text-gray-400 leading-relaxed font-light">{branch.address}</p>
+                  )}
                 </div>
                 {branch.phone && (
                   <div className="pt-4 border-t border-white/5 flex items-center justify-between text-xs text-gray-500">

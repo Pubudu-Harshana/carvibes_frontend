@@ -1,4 +1,5 @@
 export const CARVIBES_WHATSAPP_NUMBER = "94717188814";
+export const GOOGLE_MAPS_KOSGAMA_URL = "https://maps.app.goo.gl/H6CuAddC6TZBQ8jx7?g_st=aw";
 
 export const WHATSAPP_MESSAGES = {
   QUOTATIONS:
