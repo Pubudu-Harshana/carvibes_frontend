@@ -11,9 +11,12 @@ import {
   Eye,
   Car,
   Briefcase,
-  ChevronRight
+  ChevronRight,
+  FileText,
+  Calendar
 } from "lucide-react";
 import FacilityGallery from "@/components/FacilityGallery";
+import { WHATSAPP_LINKS, getServiceQuotationUrl } from "@/constants/whatsapp";
 
 const branches = [
   {
@@ -88,17 +91,17 @@ export default function Home() {
 
         {/* Hero Content */}
         <div className="relative z-10 text-center max-w-4xl mx-auto space-y-8 mt-8 sm:mt-12">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-          >
-            <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight text-white uppercase">
-              CarVibes<span className="text-primary font-bold">.lk</span>
-            </h1>
-          </motion.div>
+          <div className="-mt-6 sm:-mt-10 space-y-3 sm:space-y-4">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+            >
+              <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight text-white uppercase">
+                CarVibes<span className="text-primary font-bold">.lk</span>
+              </h1>
+            </motion.div>
 
-          <div className="pt-20 sm:pt-28 md:pt-32 space-y-8">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -107,23 +110,64 @@ export default function Home() {
             >
               Sri Lanka&apos;s ultimate luxury automotive detailing experience is being unleashed. Feel the premium services at Kosgama. Opening soon in Avissawella and Ratnapura.
             </motion.p>
+          </div>
 
+          <div className="pt-32 sm:pt-44 md:pt-52">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               className="pt-3 sm:pt-5"
             >
-              <a
-                href="https://wa.me/94717188814?text=Hi%20CarVibes!%20I%20am%20interested%20in%20joining%20your%20team."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 rounded-xl bg-primary hover:bg-primary/95 text-white orange-glow font-bold px-10 py-5 text-lg transition-all duration-300 hover:scale-[1.05] group"
-              >
-                <Briefcase className="h-5 w-5" />
-                JOIN US
-                <ChevronRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </a>
+              {/* Three Primary Action Buttons */}
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-3xl mx-auto">
+                <a
+                  href={WHATSAPP_LINKS.QUOTATIONS}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 rounded-xl bg-white/10 hover:bg-white/15 text-white border border-white/20 hover:border-primary/50 font-bold px-8 py-4 text-base transition-all duration-300 hover:scale-[1.03] backdrop-blur-md group uppercase tracking-wider"
+                >
+                  <FileText className="h-5 w-5 text-primary" />
+                  Quotations
+                  <ChevronRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </a>
+
+                <a
+                  href={WHATSAPP_LINKS.RESERVATIONS}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 rounded-xl bg-white/10 hover:bg-white/15 text-white border border-white/20 hover:border-primary/50 font-bold px-8 py-4 text-base transition-all duration-300 hover:scale-[1.03] backdrop-blur-md group uppercase tracking-wider"
+                >
+                  <Calendar className="h-5 w-5 text-primary" />
+                  Reservations
+                  <ChevronRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </a>
+
+                <a
+                  href={WHATSAPP_LINKS.LOCATIONS}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 rounded-xl bg-white/10 hover:bg-white/15 text-white border border-white/20 hover:border-primary/50 font-bold px-8 py-4 text-base transition-all duration-300 hover:scale-[1.03] backdrop-blur-md group uppercase tracking-wider"
+                >
+                  <MapPin className="h-5 w-5 text-primary" />
+                  Locations
+                  <ChevronRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </a>
+              </div>
+
+              {/* Join Us button as previous but a little bit down */}
+              <div className="pt-8 sm:pt-10 flex justify-center">
+                <a
+                  href="https://wa.me/94717188814?text=Hi%20CarVibes!%20I%20am%20interested%20in%20joining%20your%20team."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 rounded-xl bg-primary hover:bg-primary/95 text-white orange-glow font-bold px-10 py-5 text-lg transition-all duration-300 hover:scale-[1.05] group"
+                >
+                  <Briefcase className="h-5 w-5" />
+                  JOIN US
+                  <ChevronRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </a>
+              </div>
             </motion.div>
           </div>
         </div>
@@ -176,6 +220,19 @@ export default function Home() {
                 )}
               </motion.div>
             ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <a
+              href={WHATSAPP_LINKS.LOCATIONS}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2.5 rounded-xl bg-white/10 hover:bg-white/15 border border-white/20 hover:border-primary/50 px-7 py-3.5 text-sm font-bold text-white transition-all duration-300 hover:scale-[1.02] backdrop-blur-md group"
+            >
+              <MapPin className="h-4 w-4 text-primary" />
+              Inquire About Locations & Addresses via WhatsApp
+              <ChevronRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            </a>
           </div>
         </section>
       </div>
@@ -232,7 +289,7 @@ export default function Home() {
                   </div>
                   <div className="mt-6 pt-4 border-t border-white/5">
                     <a
-                      href={`https://wa.me/94717188814?text=Hi%20CarVibes!%20I%20would%20like%20to%20request%20a%20quotation%20for%20the%20${encodeURIComponent(service.name)}%20service.`}
+                      href={getServiceQuotationUrl(service.name)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3 text-xs font-bold text-white transition-all duration-300 hover:bg-primary/95 hover:scale-[1.02] uppercase tracking-wider orange-glow"
@@ -244,6 +301,27 @@ export default function Home() {
                 </motion.div>
               );
             })}
+          </div>
+
+          <div className="mt-14 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href={WHATSAPP_LINKS.QUOTATIONS}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 rounded-xl bg-white/10 hover:bg-white/15 text-white border border-white/20 hover:border-primary/50 font-bold px-7 py-3.5 text-sm transition-all duration-300 hover:scale-[1.02] backdrop-blur-md group"
+            >
+              <FileText className="h-4 w-4 text-primary" />
+              General Quotations
+            </a>
+            <a
+              href={WHATSAPP_LINKS.RESERVATIONS}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 rounded-xl bg-white/10 hover:bg-white/15 text-white border border-white/20 hover:border-primary/50 font-bold px-7 py-3.5 text-sm transition-all duration-300 hover:scale-[1.02] backdrop-blur-md group"
+            >
+              <Calendar className="h-4 w-4 text-primary" />
+              Make a Reservation
+            </a>
           </div>
         </section>
       </div>

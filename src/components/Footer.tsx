@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Phone, MapPin } from "lucide-react";
+import { WHATSAPP_LINKS } from "@/constants/whatsapp";
 
 export default function Footer() {
   return (
@@ -24,12 +25,24 @@ export default function Footer() {
               Sri Lanka&apos;s premier professional car detailing & auto care service. Experience luxury detailing perfected to perfection.
             </p>
             <div className="flex space-x-4">
-              <Link href="#" className="hover:text-primary transition-colors" aria-label="Facebook">
+              <Link
+                href="https://www.facebook.com/profile.php?id=61592733016959&sfnsn=wa&mibextid=RUbZ1f"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary transition-colors"
+                aria-label="Facebook"
+              >
                 <svg className="h-5 w-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/>
                 </svg>
               </Link>
-              <Link href="#" className="hover:text-primary transition-colors" aria-label="Instagram">
+              <Link
+                href="https://www.instagram.com/carvibes.lk?utm_source=qr&srtk=MTQ2OTVzYjZwbjFncA=="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary transition-colors"
+                aria-label="Instagram"
+              >
                 <svg className="h-5 w-5 stroke-current fill-none stroke-2 animate-none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
                   <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
@@ -59,6 +72,39 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/#services" className="hover:text-white transition-colors">Services</Link>
+              </li>
+              <li>
+                <a
+                  href={WHATSAPP_LINKS.QUOTATIONS}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors text-gray-300 flex items-center gap-1.5"
+                >
+                  <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+                  Quotations
+                </a>
+              </li>
+              <li>
+                <a
+                  href={WHATSAPP_LINKS.RESERVATIONS}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors text-gray-300 flex items-center gap-1.5"
+                >
+                  <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+                  Reservations
+                </a>
+              </li>
+              <li>
+                <a
+                  href={WHATSAPP_LINKS.LOCATIONS}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors text-gray-300 flex items-center gap-1.5"
+                >
+                  <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+                  Locations
+                </a>
               </li>
               <li>
                 <a
