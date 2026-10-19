@@ -97,7 +97,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href={WHATSAPP_LINKS.LOCATIONS}
+                  href={GOOGLE_MAPS_KOSGAMA_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-primary transition-colors text-gray-300 flex items-center gap-1.5"

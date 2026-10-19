@@ -144,7 +144,7 @@ export default function Home() {
                 </a>
 
                 <a
-                  href={WHATSAPP_LINKS.LOCATIONS}
+                  href={GOOGLE_MAPS_KOSGAMA_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 rounded-xl bg-white/10 hover:bg-white/15 text-white border border-white/20 hover:border-primary/50 font-bold px-8 py-4 text-base transition-all duration-300 hover:scale-[1.03] backdrop-blur-md group uppercase tracking-wider"
