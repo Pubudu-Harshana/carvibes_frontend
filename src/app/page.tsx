@@ -92,6 +92,55 @@ export default function Home() {
         {/* Hero Content */}
         <div className="relative z-10 text-center max-w-4xl mx-auto space-y-8 mt-8 sm:mt-12">
           <div className="-mt-6 sm:-mt-10 space-y-3 sm:space-y-4">
+            {/* Social Media Icons */}
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.05 }}
+              className="flex items-center justify-center gap-5 pb-2"
+            >
+              {/* Facebook */}
+              <a
+                href="https://www.facebook.com/profile.php?id=61592733016959&sfnsn=wa&mibextid=RUbZ1f"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="CarVibes on Facebook"
+                className="group flex items-center justify-center w-10 h-10 rounded-full bg-white/10 border border-white/15 text-gray-400 hover:text-primary hover:bg-white/20 hover:border-primary/50 transition-all duration-300 hover:scale-110"
+              >
+                <svg className="h-5 w-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/>
+                </svg>
+              </a>
+
+              {/* Instagram */}
+              <a
+                href="https://www.instagram.com/carvibes.lk?utm_source=qr&srtk=MTQ2OTVzYjZwbjFncA=="
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="CarVibes on Instagram"
+                className="group flex items-center justify-center w-10 h-10 rounded-full bg-white/10 border border-white/15 text-gray-400 hover:text-primary hover:bg-white/20 hover:border-primary/50 transition-all duration-300 hover:scale-110"
+              >
+                <svg className="h-5 w-5 stroke-current fill-none" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                  <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                </svg>
+              </a>
+
+              {/* WhatsApp */}
+              <a
+                href="https://wa.me/94717188814"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="CarVibes on WhatsApp"
+                className="group flex items-center justify-center w-10 h-10 rounded-full bg-white/10 border border-white/15 text-gray-400 hover:text-primary hover:bg-white/20 hover:border-primary/50 transition-all duration-300 hover:scale-110"
+              >
+                <svg className="h-5 w-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.455L0 24zm6.59-4.846c1.66.986 3.284 1.48 4.936 1.481 5.482 0 9.943-4.461 9.947-9.948.002-2.659-1.03-5.158-2.906-7.037-1.876-1.879-4.376-2.91-7.036-2.911-5.489 0-9.95 4.462-9.954 9.949-.001 1.77.466 3.493 1.353 5.03l-1.01 3.688 3.774-.988zm11.385-6.84c-.315-.158-1.86-.92-2.148-1.025-.289-.105-.499-.158-.709.158-.21.315-.813 1.025-.996 1.235-.183.21-.367.236-.682.079-.315-.158-1.33-.49-2.533-1.564-.936-.835-1.568-1.867-1.751-2.182-.183-.315-.02-.485.137-.642.142-.141.315-.367.472-.551.157-.184.21-.315.315-.525.105-.21.053-.394-.026-.551-.079-.158-.709-1.708-.971-2.34-.255-.612-.515-.529-.709-.539-.183-.01-.394-.01-.604-.01-.21 0-.551.079-.84.394-.289.315-1.103 1.077-1.103 2.629 0 1.551 1.129 3.048 1.287 3.258.158.21 2.221 3.391 5.38 4.757.752.325 1.339.519 1.797.665.756.24 1.444.207 1.988.126.607-.09 1.86-.761 2.122-1.458.262-.697.262-1.298.183-1.42-.079-.12-.289-.208-.604-.367z"/>
+                </svg>
+              </a>
+            </motion.div>
+
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -110,6 +159,7 @@ export default function Home() {
             >
               Sri Lanka&apos;s ultimate luxury automotive detailing experience is being unleashed. Feel the premium services at Kosgama. Opening soon in Avissawella and Ratnapura.
             </motion.p>
+
           </div>
 
           <div className="pt-32 sm:pt-44 md:pt-52">
