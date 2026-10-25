@@ -92,6 +92,13 @@ export default function Navbar() {
             >
               Services
             </Link>
+            <Link
+              href="/#pricing"
+              onClick={(e) => handleScroll(e, "pricing")}
+              className="text-sm font-medium text-gray-300 hover:text-white transition-colors"
+            >
+              Price
+            </Link>
             <a
               href="https://wa.me/94717188814?text=Hi%20CarVibes!%20I%20am%20interested%20in%20joining%20your%20team."
               target="_blank"
@@ -161,6 +168,16 @@ export default function Navbar() {
                 className="block text-base font-medium text-gray-300 hover:text-white py-2 border-b border-white/5"
               >
                 Services
+              </Link>
+              <Link
+                href="/#pricing"
+                onClick={(e) => {
+                  setIsOpen(false);
+                  handleScroll(e, "pricing");
+                }}
+                className="block text-base font-medium text-gray-300 hover:text-white py-2 border-b border-white/5"
+              >
+                Price
               </Link>
               <a
                 href="https://wa.me/94717188814?text=Hi%20CarVibes!%20I%20am%20interested%20in%20joining%20your%20team."
