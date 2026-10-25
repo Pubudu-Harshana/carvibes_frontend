@@ -74,15 +74,13 @@ export default function Footer() {
                 <Link href="/#services" className="hover:text-white transition-colors">Services</Link>
               </li>
               <li>
-                <a
-                  href={WHATSAPP_LINKS.QUOTATIONS}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/#pricing"
                   className="hover:text-primary transition-colors text-gray-300 flex items-center gap-1.5"
                 >
                   <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-                  Quotations
-                </a>
+                  Price Packages
+                </Link>
               </li>
               <li>
                 <a
