@@ -97,7 +97,7 @@ export default function Navbar() {
               onClick={(e) => handleScroll(e, "pricing")}
               className="text-sm font-medium text-gray-300 hover:text-white transition-colors"
             >
-              Price
+              Prices
             </Link>
             <a
               href="https://wa.me/94717188814?text=Hi%20CarVibes!%20I%20am%20interested%20in%20joining%20your%20team."
@@ -177,7 +177,7 @@ export default function Navbar() {
                 }}
                 className="block text-base font-medium text-gray-300 hover:text-white py-2 border-b border-white/5"
               >
-                Price
+                Prices
               </Link>
               <a
                 href="https://wa.me/94717188814?text=Hi%20CarVibes!%20I%20am%20interested%20in%20joining%20your%20team."
