@@ -170,12 +170,12 @@ export default function PricingPackages() {
                     : "border-white/10 hover:border-primary/40"
                 }`}
               >
-                {/* Highlight Badge for Premium Vibe */}
-                {pkg.isPopular && (
+                {/* Highlight Badge */}
+                {(pkg.badge || pkg.isPopular) && (
                   <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 z-20">
                     <span className="inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-1 text-xs font-extrabold uppercase tracking-wider text-white orange-glow">
                       <Sparkles className="h-3.5 w-3.5" />
-                      Most Comprehensive
+                      {pkg.badge || "Most Comprehensive"}
                     </span>
                   </div>
                 )}

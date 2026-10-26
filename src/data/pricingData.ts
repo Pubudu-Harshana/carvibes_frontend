@@ -8,6 +8,7 @@ export interface PackageItem {
   originalPrice: number;
   duration: string;
   isPopular?: boolean;
+  badge?: string;
   description: string;
   features: string[];
   freeBonus?: string;
@@ -76,6 +77,8 @@ export const PRICING_DATA: Record<VehicleType, VehiclePricingConfig> = {
         originalPrice: 10000,
         price: 6900,
         duration: "3 – 5 hrs",
+        isPopular: true,
+        badge: "Most Comprehensive",
         description:
           "Comprehensive exterior and interior treatment designed to strip contaminants and condition high-wear surfaces.",
         features: [
@@ -98,7 +101,6 @@ export const PRICING_DATA: Record<VehicleType, VehiclePricingConfig> = {
         originalPrice: 18000,
         price: 13900,
         duration: "1 Day",
-        isPopular: true,
         description:
           "Our signature, high-intensity showroom package featuring intensive steam sanitation and complete engine care.",
         features: [
@@ -198,6 +200,8 @@ export const PRICING_DATA: Record<VehicleType, VehiclePricingConfig> = {
         originalPrice: 13000,
         price: 9900,
         duration: "4 – 6 hrs",
+        isPopular: true,
+        badge: "Most Comprehensive",
         description:
           "Comprehensive exterior and interior treatment designed to strip contaminants and condition high-wear surfaces.",
         features: [
@@ -220,7 +224,6 @@ export const PRICING_DATA: Record<VehicleType, VehiclePricingConfig> = {
         originalPrice: 19000,
         price: 17900,
         duration: "1 Day",
-        isPopular: true,
         description:
           "Our signature, high-intensity showroom package featuring intensive steam sanitation and complete engine care.",
         features: [
@@ -320,6 +323,8 @@ export const PRICING_DATA: Record<VehicleType, VehiclePricingConfig> = {
         originalPrice: 15000,
         price: 11900,
         duration: "4 – 6 hrs",
+        isPopular: true,
+        badge: "Most Comprehensive",
         description:
           "Comprehensive exterior and interior treatment designed to strip contaminants and condition high-wear surfaces.",
         features: [
@@ -342,7 +347,6 @@ export const PRICING_DATA: Record<VehicleType, VehiclePricingConfig> = {
         originalPrice: 21000,
         price: 19000,
         duration: "1 Day",
-        isPopular: true,
         description:
           "Our signature, high-intensity showroom package featuring intensive steam sanitation and complete engine care.",
         features: [
