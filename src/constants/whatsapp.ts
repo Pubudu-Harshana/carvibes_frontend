@@ -27,14 +27,14 @@ export const getServiceQuotationUrl = (serviceName: string) =>
     `Hi Carvibes, I would like to request a quotation for the ${serviceName} service. Could you please provide me with more details about your services and pricing?`
   );
 
-export const getPackageBookingUrl = (packageName: string, price?: string) =>
+export const getPackageBookingUrl = (packageName: string, price?: string, vehicle?: string) =>
   getWhatsAppUrl(
-    `Hi Carvibes, I would like to book the ${packageName}${price ? ` package (${price})` : ""}. Could you please provide me with available slots and reservation details?`
+    `Hi Carvibes, I would like to book the ${packageName}${price ? ` package (${price})` : ""}${vehicle ? ` for my ${vehicle}` : ""}. Could you please provide me with available slots and reservation details?`
   );
 
-export const getAddOnBookingUrl = (addOnName: string, price?: string) =>
+export const getAddOnBookingUrl = (addOnName: string, price?: string, vehicle?: string) =>
   getWhatsAppUrl(
-    `Hi Carvibes, I would like to inquire about adding "${addOnName}"${price ? ` (${price})` : ""} to my detailing service. Could you please share details?`
+    `Hi Carvibes, I would like to inquire about adding "${addOnName}"${price ? ` (${price})` : ""}${vehicle ? ` for my ${vehicle}` : ""} to my detailing service. Could you please share details?`
   );
 
 export const getBranchLocationUrl = (branchName: string) =>
