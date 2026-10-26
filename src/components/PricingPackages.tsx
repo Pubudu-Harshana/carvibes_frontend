@@ -353,10 +353,20 @@ export default function PricingPackages() {
                       {addon.name}
                     </h4>
 
-                    {addon.perk && (
-                      <div className="mt-2.5 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-primary/10 border border-primary/20 text-[11px] text-primary font-medium">
-                        <Gift className="h-3 w-3 shrink-0 text-primary" />
-                        <span>{addon.perk}</span>
+                    {(addon.perk || addon.warranty) && (
+                      <div className="mt-2.5 flex flex-col gap-1.5">
+                        {addon.perk && (
+                          <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-primary/10 border border-primary/20 text-[11px] text-primary font-medium w-fit">
+                            <Gift className="h-3 w-3 shrink-0 text-primary" />
+                            <span>{addon.perk}</span>
+                          </div>
+                        )}
+                        {addon.warranty && (
+                          <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/10 text-[11px] text-gray-300 font-medium w-fit">
+                            <Shield className="h-3 w-3 shrink-0 text-primary" />
+                            <span>{addon.warranty}</span>
+                          </div>
+                        )}
                       </div>
                     )}
 

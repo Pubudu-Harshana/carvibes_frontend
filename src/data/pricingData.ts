@@ -23,6 +23,7 @@ export interface AddOnItem {
   tag: string;
   price: number;
   perk?: string;
+  warranty?: string;
   description: string;
 }
 
@@ -110,10 +111,11 @@ export const PRICING_DATA: Record<VehicleType, VehiclePricingConfig> = {
           "Interior Steam Clean & Sanitization",
           "Engine Degrease with Steam Cleaning & Foam",
           "Plastic Parts Conditioning",
+          "Leather Conditioning",
+          "Body Wax",
         ],
         freeBonus: "1 Free Decontamination Wash within 2 months",
         warranty: "6 Months Warranty* on Plastic & Leather Conditioner",
-        ceramicBonus: "Free Ceramic Coating top up after 2 months (6 Months Warranty*)",
         maintenanceNote: "* Maintenance wash must be done by carvibes.lk",
       },
     ],
@@ -140,6 +142,7 @@ export const PRICING_DATA: Record<VehicleType, VehiclePricingConfig> = {
         tag: "Glass Protection",
         price: 7900,
         perk: "Free Wurth Windscreen Washer Fluid included",
+        warranty: "6 Months Ceramic Coating Warranty*",
         description:
           "Specialized mineral water spot extraction from the front windshield paired with hydrophobic ceramic spray seal for high rainy-drive clarity.",
       },
@@ -148,6 +151,7 @@ export const PRICING_DATA: Record<VehicleType, VehiclePricingConfig> = {
         name: "All Glass Spot Removal & Ceramic Spray Coating",
         tag: "Full Visibility",
         price: 11900,
+        warranty: "6 Months Ceramic Coating Warranty*",
         description:
           "Complete 360° water spot mineral removal and hydrophobic ceramic spray barrier across all vehicle windows and windshields.",
       },
@@ -164,8 +168,7 @@ export const PRICING_DATA: Record<VehicleType, VehiclePricingConfig> = {
         "Nano Coatings",
       ],
       perks: [
-        "Free Ceramic Coating top up after 2 months",
-        "6 Months Warranty*",
+        "5-Year Warranty*",
       ],
       maintenanceNote: "* Maintenance wash must be done by carvibes.lk",
     },
@@ -233,10 +236,11 @@ export const PRICING_DATA: Record<VehicleType, VehiclePricingConfig> = {
           "Interior Steam Clean & Sanitization",
           "Engine Degrease with Steam Cleaning & Foam",
           "Plastic Parts Conditioning",
+          "Leather Conditioning",
+          "Body Wax",
         ],
         freeBonus: "1 Free Decontamination Wash within 2 months",
         warranty: "6 Months Warranty* on Plastic & Leather Conditioner",
-        ceramicBonus: "Free Ceramic Coating top up after 2 months (6 Months Warranty*)",
         maintenanceNote: "* Maintenance wash must be done by carvibes.lk",
       },
     ],
@@ -263,6 +267,7 @@ export const PRICING_DATA: Record<VehicleType, VehiclePricingConfig> = {
         tag: "Glass Protection",
         price: 8900,
         perk: "Free Wurth Windscreen Washer Fluid included",
+        warranty: "6 Months Ceramic Coating Warranty*",
         description:
           "Specialized mineral water spot extraction from the front windshield paired with hydrophobic ceramic spray seal for high rainy-drive clarity.",
       },
@@ -271,6 +276,7 @@ export const PRICING_DATA: Record<VehicleType, VehiclePricingConfig> = {
         name: "All Glass Spot Removal & Ceramic Spray Coating",
         tag: "Full Visibility",
         price: 11900,
+        warranty: "6 Months Ceramic Coating Warranty*",
         description:
           "Complete 360° water spot mineral removal and hydrophobic ceramic spray barrier across all vehicle windows and windshields.",
       },
@@ -287,8 +293,7 @@ export const PRICING_DATA: Record<VehicleType, VehiclePricingConfig> = {
         "Nano Coatings",
       ],
       perks: [
-        "Free Ceramic Coating top up after 2 months",
-        "6 Months Warranty*",
+        "5-Year Warranty*",
       ],
       maintenanceNote: "* Maintenance wash must be done by carvibes.lk",
     },
@@ -356,10 +361,11 @@ export const PRICING_DATA: Record<VehicleType, VehiclePricingConfig> = {
           "Interior Steam Clean & Sanitization",
           "Engine Degrease with Steam Cleaning & Foam",
           "Plastic Parts Conditioning",
+          "Leather Conditioning",
+          "Body Wax",
         ],
         freeBonus: "1 Free Decontamination Wash within 2 months",
         warranty: "6 Months Warranty* on Plastic & Leather Conditioner",
-        ceramicBonus: "Free Ceramic Coating top up after 2 months (6 Months Warranty*)",
         maintenanceNote: "* Maintenance wash must be done by carvibes.lk",
       },
     ],
@@ -386,6 +392,7 @@ export const PRICING_DATA: Record<VehicleType, VehiclePricingConfig> = {
         tag: "Glass Protection",
         price: 8900,
         perk: "Free Wurth Windscreen Washer Fluid included",
+        warranty: "6 Months Ceramic Coating Warranty*",
         description:
           "Specialized mineral water spot extraction from the front windshield paired with hydrophobic ceramic spray seal for high rainy-drive clarity.",
       },
@@ -394,6 +401,7 @@ export const PRICING_DATA: Record<VehicleType, VehiclePricingConfig> = {
         name: "All Glass Spot Removal & Ceramic Spray Coating",
         tag: "Full Visibility",
         price: 13900,
+        warranty: "6 Months Ceramic Coating Warranty*",
         description:
           "Complete 360° water spot mineral removal and hydrophobic ceramic spray barrier across all vehicle windows and windshields.",
       },
@@ -410,8 +418,7 @@ export const PRICING_DATA: Record<VehicleType, VehiclePricingConfig> = {
         "Nano Coatings",
       ],
       perks: [
-        "Free Ceramic Coating top up after 2 months",
-        "6 Months Warranty*",
+        "5-Year Warranty*",
       ],
       maintenanceNote: "* Maintenance wash must be done by carvibes.lk",
     },
