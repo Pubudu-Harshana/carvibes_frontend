@@ -124,7 +124,7 @@ export const PRICING_DATA: Record<VehicleType, VehiclePricingConfig> = {
         id: "ceramic-car-shampoo-car",
         name: "Ceramic Car Shampoo",
         tag: "Maintenance Wash",
-        price: 3900,
+        price: 6900,
         description:
           "pH-neutral, SiO2-infused ceramic wash shampoo for superior lubricity, intense gloss, and hydrophobic self-cleaning protection.",
       },
@@ -249,7 +249,7 @@ export const PRICING_DATA: Record<VehicleType, VehiclePricingConfig> = {
         id: "ceramic-car-shampoo-suv",
         name: "Ceramic Car Shampoo",
         tag: "Maintenance Wash",
-        price: 4900,
+        price: 9900,
         description:
           "pH-neutral, SiO2-infused ceramic wash shampoo for superior lubricity, intense gloss, and hydrophobic self-cleaning protection.",
       },
@@ -374,7 +374,7 @@ export const PRICING_DATA: Record<VehicleType, VehiclePricingConfig> = {
         id: "ceramic-car-shampoo-van",
         name: "Ceramic Car Shampoo",
         tag: "Maintenance Wash",
-        price: 4900,
+        price: 9900,
         description:
           "pH-neutral, SiO2-infused ceramic wash shampoo for superior lubricity, intense gloss, and hydrophobic self-cleaning protection.",
       },
