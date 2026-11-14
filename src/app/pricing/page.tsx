@@ -7,6 +7,30 @@ export const metadata: Metadata = {
   title: "Service Packages & Pricing | CarVibes.lk Kosgama",
   description:
     "Official detailing packages and prices for CarVibes.lk in Sri Lankan Rupees (LKR). Choose between Basic Vibe, Refresh Vibe, Premium Vibe, and specialized ceramic and glass treatments.",
+  openGraph: {
+    title: "Service Packages & Pricing | CarVibes.lk Kosgama",
+    description:
+      "Official detailing packages and prices for CarVibes.lk in Sri Lankan Rupees (LKR). Choose between Basic Vibe, Refresh Vibe, Premium Vibe, and specialized ceramic and glass treatments.",
+    url: "https://carvibes.lk/pricing",
+    siteName: "CarVibes.lk",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1024,
+        height: 1024,
+        alt: "CarVibes.lk Detailing Packages & Pricing",
+      },
+    ],
+    locale: "en_LK",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Service Packages & Pricing | CarVibes.lk Kosgama",
+    description:
+      "Official detailing packages and prices for CarVibes.lk in Sri Lankan Rupees (LKR). Choose between Basic Vibe, Refresh Vibe, Premium Vibe, and specialized ceramic and glass treatments.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function PricingPage() {
